@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fil">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filipino 9 — Grade 9 Topaz</title>
+    <title>MAPEH 9 — Grade 9 Topaz</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -14,7 +14,6 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Playfair Display', 'serif'],
-                        serif: ['Crimson Pro', 'serif'],
                         mono: ['JetBrains Mono', 'monospace'],
                     }
                 }
@@ -25,264 +24,957 @@
         * { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; background: #0D0D0D; }
 
-        /* Existing gradients + new one if needed */
-        .gradient-text-red { background: linear-gradient(135deg, #EF4444, #DC2626); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .gradient-text-gold { background: linear-gradient(135deg, #F59E0B, #FBBF24, #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-text-cyan { background: linear-gradient(135deg, #06B6D4, #22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-text-rose { background: linear-gradient(135deg, #F43F5E, #FB7185); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-text-violet { background: linear-gradient(135deg, #8B5CF6, #A78BFA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-text-emerald { background: linear-gradient(135deg, #10B981, #34D399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .gradient-text-amber { background: linear-gradient(135deg, #F59E0B, #D97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .gradient-text-emerald { background: linear-gradient(135deg, #34D399, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .gradient-text-violet { background: linear-gradient(135deg, #A78BFA, #7C3AED); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .gradient-text-rose { background: linear-gradient(135deg, #FB7185, #E11D48); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .gradient-text-sky { background: linear-gradient(135deg, #38BDF8, #0284C7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .gradient-text-warm { background: linear-gradient(135deg, #F97316, #EF4444, #DC2626); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-text-sky { background: linear-gradient(135deg, #0EA5E9, #38BDF8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-text-warm { background: linear-gradient(135deg, #F43F5E, #F97316, #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        .gradient-bg-red { background: linear-gradient(135deg, #DC2626, #991B1B); }
         .gradient-bg-gold { background: linear-gradient(135deg, #B45309, #F59E0B, #FDE68A); }
-        .gradient-bg-amber { background: linear-gradient(135deg, #D97706, #F59E0B); }
-        .gradient-bg-emerald { background: linear-gradient(135deg, #059669, #34D399); }
-        .gradient-bg-violet { background: linear-gradient(135deg, #7C3AED, #A78BFA); }
-        .gradient-bg-rose { background: linear-gradient(135deg, #E11D48, #FB7185); }
-        .gradient-bg-sky { background: linear-gradient(135deg, #0284C7, #38BDF8); }
-        .gradient-bg-warm { background: linear-gradient(135deg, #DC2626, #F97316); }
+        .gradient-bg-cyan { background: linear-gradient(135deg, #0E7490, #06B6D4); }
+        .gradient-bg-rose { background: linear-gradient(135deg, #BE123C, #F43F5E); }
+        .gradient-bg-violet { background: linear-gradient(135deg, #6D28D9, #8B5CF6); }
+        .gradient-bg-emerald { background: linear-gradient(135deg, #047857, #10B981); }
+        .gradient-bg-amber { background: linear-gradient(135deg, #B45309, #F59E0B); }
+        .gradient-bg-sky { background: linear-gradient(135deg, #0369A1, #0EA5E9); }
 
-        /* ... (all your existing styles remain unchanged) ... */
         .blob { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; animation: blob 8s ease-in-out infinite; }
-        @keyframes blob { /* existing blob animation */ }
-        /* (keeping all your original styles intact) */
+        @keyframes blob {
+            0%, 100% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; transform: rotate(0deg) scale(1); }
+            25% { border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%; transform: rotate(5deg) scale(1.02); }
+            50% { border-radius: 30% 70% 50% 50% / 60% 30% 70% 40%; transform: rotate(-3deg) scale(0.98); }
+            75% { border-radius: 50% 50% 60% 40% / 35% 65% 35% 65%; transform: rotate(4deg) scale(1.01); }
+        }
+
+        .float-1 { animation: float1 6s ease-in-out infinite; }
+        .float-2 { animation: float2 8s ease-in-out infinite; }
+        .float-3 { animation: float3 7s ease-in-out infinite; }
+        .float-4 { animation: float4 9s ease-in-out infinite; }
+        @keyframes float1 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        @keyframes float2 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+        @keyframes float3 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-25px); } }
+        @keyframes float4 { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-12px) rotate(2deg); } }
+
+        .fade-up { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+        .nav-blur { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .scroll-indicator { animation: scrollBounce 2s ease-in-out infinite; }
+        @keyframes scrollBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+
+        ::selection { background: #F43F5E; color: white; }
+
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(135deg, #F43F5E, #06B6D4); border-radius: 2px; transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
+
+        .dark-card { background: #1A1A1A; border: 1px solid #2A2A2A; }
+        .dark-card-glow-gold { background: #1A1A1A; border: 1px solid rgba(245,158,11,0.25); box-shadow: 0 4px 30px rgba(245,158,11,0.08); }
+        .dark-card-glow-cyan { background: #1A1A1A; border: 1px solid rgba(6,182,212,0.2); box-shadow: 0 4px 20px rgba(6,182,212,0.05); }
+        .dark-card-glow-rose { background: #1A1A1A; border: 1px solid rgba(244,63,94,0.2); box-shadow: 0 4px 20px rgba(244,63,94,0.05); }
+        .dark-card-glow-violet { background: #1A1A1A; border: 1px solid rgba(139,92,246,0.2); box-shadow: 0 4px 20px rgba(139,92,246,0.05); }
+        .dark-card-glow-emerald { background: #1A1A1A; border: 1px solid rgba(16,185,129,0.2); box-shadow: 0 4px 20px rgba(16,185,129,0.05); }
+        .dark-card-glow-sky { background: #1A1A1A; border: 1px solid rgba(14,165,233,0.2); box-shadow: 0 4px 20px rgba(14,165,233,0.05); }
+
+        .inner-dark { background: #111111; border: 1px solid #222222; }
+        .gold-glow { box-shadow: 0 0 60px rgba(245,158,11,0.15), 0 0 120px rgba(245,158,11,0.05); }
+
+        .embed-stripe { background: linear-gradient(180deg, #F59E0B, #B45309); }
+
+        .topic-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .topic-card:hover { transform: translateY(-8px) scale(1.01); }
+        .topic-card:hover .topic-icon { transform: scale(1.1) rotate(5deg); }
+        .topic-icon { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        #loginOverlay { transition: opacity 0.6s ease, visibility 0.6s ease; }
+        #loginOverlay.hiding { opacity: 0; visibility: hidden; }
+        #mainContent { opacity: 0; transition: opacity 0.8s ease 0.3s; }
+        #mainContent.show { opacity: 1; }
+
+        .login-input:focus { outline: none; border-color: #F59E0B; box-shadow: 0 0 0 3px rgba(245,158,11,0.15), 0 0 30px rgba(245,158,11,0.1); }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); } 20%, 40%, 60%, 80% { transform: translateX(4px); } }
+        .shake { animation: shake 0.5s ease-in-out; }
+        @keyframes gemGlow { 0%, 100% { box-shadow: 0 0 30px rgba(245,158,11,0.3), 0 0 60px rgba(245,158,11,0.1); } 50% { box-shadow: 0 0 50px rgba(245,158,11,0.5), 0 0 100px rgba(245,158,11,0.2); } }
+        .gem-glow { animation: gemGlow 3s ease-in-out infinite; }
+        @keyframes loginFloat { 0%, 100% { transform: translateY(0px) rotate(0deg); } 25% { transform: translateY(-10px) rotate(1deg); } 75% { transform: translateY(-5px) rotate(-1deg); } }
+        .login-float { animation: loginFloat 5s ease-in-out infinite; }
+
+        .tab-btn { transition: all 0.3s ease; }
+        .tab-btn.active { border-color: rgba(6,182,212,0.5) !important; background: rgba(6,182,212,0.1) !important; color: #22D3EE !important; }
+        .tab-content { display: none; animation: fadeInTab 0.4s ease; }
+        .tab-content.active { display: block; }
+        @keyframes fadeInTab { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .music-wave span { display: inline-block; width: 4px; margin: 0 2px; border-radius: 2px; background: linear-gradient(180deg, #06B6D4, #0891B2); animation: musicWave 1s ease-in-out infinite; }
+        .music-wave span:nth-child(1) { animation-delay: 0s; height: 12px; }
+        .music-wave span:nth-child(2) { animation-delay: 0.1s; height: 20px; }
+        .music-wave span:nth-child(3) { animation-delay: 0.2s; height: 8px; }
+        .music-wave span:nth-child(4) { animation-delay: 0.3s; height: 24px; }
+        .music-wave span:nth-child(5) { animation-delay: 0.4s; height: 16px; }
+        .music-wave span:nth-child(6) { animation-delay: 0.5s; height: 10px; }
+        .music-wave span:nth-child(7) { animation-delay: 0.6s; height: 18px; }
+        @keyframes musicWave {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.4); }
+        }
     </style>
 </head>
 <body class="text-gray-200">
 
-    <!-- LOGIN OVERLAY (unchanged) -->
-    <!-- ... existing login code ... -->
+    <!-- LOGIN OVERLAY -->
+    <div id="loginOverlay" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#0D0D0D] overflow-hidden">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-cyan-900/15 blob float-1"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-amber-900/10 blob float-2"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-rose-900/8 blob float-3"></div>
+        <div id="loginParticles" class="absolute inset-0 pointer-events-none"></div>
 
+        <div class="relative z-10 w-full max-w-md mx-4">
+            <div class="dark-card-glow-gold rounded-3xl overflow-hidden gold-glow">
+                <div class="embed-stripe h-2"></div>
+                <div class="p-8 md:p-10">
+                    <div class="flex justify-center mb-6">
+                        <div class="login-float">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-4 border-amber-500/40 gem-glow">
+                                <img src="/home/workdir/attachments/topaz.jpg" alt="9 Topaz" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mb-2">
+                        <div class="flex items-center justify-center gap-2 mb-2">
+                            <div class="w-5 h-5 gradient-bg-gold rounded-lg flex items-center justify-center"><i data-lucide="sparkles" class="w-3 h-3 text-white"></i></div>
+                            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Grade 9 — Section Topaz</span>
+                        </div>
+                        <h1 class="font-display text-3xl md:text-4xl font-bold text-white mb-1">MAPEH 9</h1>
+                        <p class="text-gray-500 text-sm">Enter passcode to access the lesson</p>
+                    </div>
+                    <div class="mt-8">
+                        <label class="block text-xs font-semibold text-amber-400/80 uppercase tracking-wider mb-2">Passcode</label>
+                        <div class="relative" id="inputWrapper">
+                            <div class="absolute left-4 top-1/2 -translate-y-1/2 text-amber-500/40"><i data-lucide="lock" class="w-5 h-5"></i></div>
+                            <input type="password" id="passcodeInput" class="login-input w-full bg-[#111111] border-2 border-gray-700 rounded-2xl py-4 pl-12 pr-14 text-white font-mono text-lg tracking-widest placeholder-gray-600 transition-all duration-300" placeholder="•••••••••" autocomplete="off">
+                            <button id="togglePasscode" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-amber-400 transition-colors"><i data-lucide="eye" class="w-5 h-5"></i></button>
+                        </div>
+                        <p id="errorMessage" class="text-red-400 text-xs mt-2 h-5 transition-opacity duration-300 opacity-0"><span class="flex items-center gap-1"><i data-lucide="alert-circle" class="w-3 h-3"></i> Incorrect passcode. Please try again.</span></p>
+                    </div>
+                    <button id="loginBtn" class="w-full mt-6 gradient-bg-gold text-white font-bold py-4 rounded-2xl text-base tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/25 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
+                        <i data-lucide="log-in" class="w-5 h-5"></i> Enter
+                    </button>
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-600 text-[11px]">Adviser: <span class="text-amber-400/70 font-semibold">Ma'am Jonah Mendizabal</span> · Created by <span class="text-rose-400/70 font-semibold">Kian V</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
     <div id="mainContent">
 
-        <!-- Navigation - UPDATED -->
-        <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-[#0D0D0D]/80 border-b border-gray-800/50 transition-all">
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-[#0D0D0D]/80 border-b border-gray-800/50">
             <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
                 <a href="#" class="flex items-center gap-2">
                     <div class="w-9 h-9 rounded-xl overflow-hidden border-2 border-amber-500/30 shadow-lg shadow-amber-500/20">
-                        <img src="https://z-cdn-media.chatglm.cn/files/ca86ff9a-526d-450f-826a-b6878d1bbce5.jpg?auth_key=1881611704-19d32f12ece844b38cacb7cd5645ea79-0-d5a63672415f92024fc14e619d270f60" alt="9 Topaz" class="w-full h-full object-cover">
+                        <img src="/home/workdir/attachments/topaz.jpg" alt="9 Topaz" class="w-full h-full object-cover">
                     </div>
-                    <span class="font-bold text-lg tracking-tight text-white hidden sm:inline">Filipino 9 · Topaz</span>
+                    <span class="font-bold text-lg tracking-tight text-white hidden sm:inline">MAPEH 9 · Topaz</span>
                 </a>
                 <div class="hidden lg:flex items-center gap-5">
                     <a href="#hero" class="nav-link text-sm font-medium text-gray-400 hover:text-white transition-colors">Home</a>
-                    <a href="#panitikan" class="nav-link text-sm font-medium text-gray-400 hover:text-red-400 transition-colors">Panitikan</a>
-                    <a href="#maikling-kwento" class="nav-link text-sm font-medium text-gray-400 hover:text-amber-400 transition-colors">Maikling Kwento</a>
-                    <a href="#dula" class="nav-link text-sm font-medium text-gray-400 hover:text-emerald-400 transition-colors">Dula</a>
-                    <a href="#tula" class="nav-link text-sm font-medium text-gray-400 hover:text-violet-400 transition-colors">Tula</a>
-                    <a href="#sanaysay" class="nav-link text-sm font-medium text-gray-400 hover:text-sky-400 transition-colors">Sanaysay</a>
-                    <a href="#tekstong-biswal" class="nav-link text-sm font-medium text-gray-400 hover:text-sky-400 transition-colors">Tekstong Biswal</a>
-                    <a href="#pagsusulit" class="nav-link text-sm font-medium text-gray-400 hover:text-rose-400 transition-colors">Pagsusulit</a>
+                    <a href="#music" class="nav-link text-sm font-medium text-gray-400 hover:text-cyan-400 transition-colors">Music</a>
+                    <a href="#film-restoration" class="nav-link text-sm font-medium text-gray-400 hover:text-rose-400 transition-colors">Film Restoration</a>
+                    <a href="#new-media" class="nav-link text-sm font-medium text-gray-400 hover:text-violet-400 transition-colors">New Media</a>
+                    <a href="#quiz" class="nav-link text-sm font-medium text-gray-400 hover:text-amber-400 transition-colors">Quiz</a>
                 </div>
                 <div class="flex items-center gap-3">
-                    <button id="logoutBtn" class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium text-gray-500 hover:text-red-400 hover:bg-red-500/10 border border-transparent hover:border-red-500/20 transition-all">
-                        <i data-lucide="log-out" class="w-3.5 h-3.5"></i><span>Logout</span>
-                    </button>
-                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl hover:bg-gray-800 transition-colors text-gray-400">
-                        <i data-lucide="menu" class="w-5 h-5"></i>
-                    </button>
+                    <button id="logoutBtn" class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium text-gray-500 hover:text-red-400 hover:bg-red-500/10 border border-transparent hover:border-red-500/20 transition-all"><i data-lucide="log-out" class="w-3.5 h-3.5"></i><span>Logout</span></button>
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl hover:bg-gray-800 transition-colors text-gray-400"><i data-lucide="menu" class="w-5 h-5"></i></button>
                 </div>
             </div>
-            <!-- Mobile Menu - UPDATED -->
             <div id="mobileMenu" class="hidden lg:hidden bg-[#0D0D0D]/95 nav-blur border-t border-gray-800">
                 <div class="px-6 py-4 grid grid-cols-2 gap-3">
                     <a href="#hero" class="text-sm font-medium text-gray-400 py-2 flex items-center gap-2 hover:text-white"><i data-lucide="home" class="w-4 h-4"></i>Home</a>
-                    <a href="#panitikan" class="text-sm font-medium text-gray-400 py-2 flex items-center gap-2 hover:text-white"><i data-lucide="book-open" class="w-4 h-4"></i>Panitikan</a>
-                    <a href="#maikling-kwento" class="text-sm font-medium text-gray-400 py-2 flex items-center gap-2 hover:text-white"><i data-lucide="file-text" class="w-4 h-4"></i>Kwento</a>
-                    <a href="#dula" class="text-sm font-medium text-gray-400 py-2 flex items-center gap-2 hover:text-white"><i data-lucide="drama" class="w-4 h-4"></i>Dula</a>
-                    <a href="#tula" class="text-sm font-medium text-gray-400 py-2 flex items-center gap-2 hover:text-white"><i data-lucide="feather" class="w-4 h-4"></i>Tula</a>
-                    <a href="#sanaysay" class="text-sm font-medium text-gray-400 py-2 flex items-center gap-2 hover:text-white"><i data-lucide="pen-line" class="w-4 h-4"></i>Sanaysay</a>
-                    <a href="#tekstong-biswal" class="text-sm font-medium text-gray-400 py-2 flex items-center gap-2 hover:text-white"><i data-lucide="image" class="w-4 h-4"></i>Tekstong Biswal</a>
-                    <a href="#pagsusulit" class="text-sm font-medium text-gray-400 py-2 flex items-center gap-2 hover:text-white"><i data-lucide="brain" class="w-4 h-4"></i>Pagsusulit</a>
+                    <a href="#music" class="text-sm font-medium text-gray-400 py-2 flex items-center gap-2 hover:text-white"><i data-lucide="music" class="w-4 h-4"></i>Music</a>
+                    <a href="#film-restoration" class="text-sm font-medium text-gray-400 py-2 flex items-center gap-2 hover:text-white"><i data-lucide="film" class="w-4 h-4"></i>Film</a>
+                    <a href="#new-media" class="text-sm font-medium text-gray-400 py-2 flex items-center gap-2 hover:text-white"><i data-lucide="monitor-smartphone" class="w-4 h-4"></i>New Media</a>
+                    <a href="#quiz" class="text-sm font-medium text-gray-400 py-2 flex items-center gap-2 hover:text-white"><i data-lucide="brain" class="w-4 h-4"></i>Quiz</a>
                     <a href="#" id="mobileLogoutBtn" class="text-sm font-medium text-red-400/60 py-2 flex items-center gap-2 hover:text-red-400"><i data-lucide="log-out" class="w-4 h-4"></i>Logout</a>
                 </div>
             </div>
         </nav>
 
-        <!-- HERO - Updated quick links -->
+        <!-- HERO -->
         <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0D0D0D]">
-            <!-- ... existing hero content ... -->
-            <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
-                <a href="#panitikan" class="px-5 py-2.5 rounded-2xl text-sm font-semibold bg-red-500/10 text-red-400 border border-red-500/20 hover:bg-red-500/20 transition-all">📚 Panitikan</a>
-                <a href="#maikling-kwento" class="px-5 py-2.5 rounded-2xl text-sm font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 hover:bg-amber-500/20 transition-all">📖 Maikling Kwento</a>
-                <a href="#dula" class="px-5 py-2.5 rounded-2xl text-sm font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/20 transition-all">🎭 Dula</a>
-                <a href="#tula" class="px-5 py-2.5 rounded-2xl text-sm font-semibold bg-violet-500/10 text-violet-400 border border-violet-500/20 hover:bg-violet-500/20 transition-all">🪶 Tula</a>
-                <a href="#sanaysay" class="px-5 py-2.5 rounded-2xl text-sm font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20 hover:bg-sky-500/20 transition-all">📝 Sanaysay</a>
-                <a href="#tekstong-biswal" class="px-5 py-2.5 rounded-2xl text-sm font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20 hover:bg-sky-500/20 transition-all">🖼️ Tekstong Biswal</a>
-                <a href="#pagsusulit" class="px-5 py-2.5 rounded-2xl text-sm font-semibold bg-rose-500/10 text-rose-400 border border-rose-500/20 hover:bg-rose-500/20 transition-all">🧠 Pagsusulit</a>
+            <div class="absolute top-20 left-10 w-72 h-72 bg-cyan-900/15 blob float-1"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-rose-900/10 blob float-2"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-violet-900/8 blob float-3"></div>
+
+            <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+                <!-- Embed Card -->
+                <div class="max-w-xl mx-auto mb-12 fade-up">
+                    <div class="dark-card-glow-gold rounded-3xl overflow-hidden gold-glow">
+                        <div class="embed-stripe h-2"></div>
+                        <div class="p-5 md:p-6">
+                            <div class="flex flex-col sm:flex-row items-center gap-5">
+                                <div class="flex-shrink-0">
+                                    <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-4 border-amber-500/30 shadow-2xl shadow-amber-500/20 gem-glow">
+                                        <img src="/home/workdir/attachments/topaz.jpg" alt="9 Topaz" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <div class="text-center sm:text-left flex-1">
+                                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                                        <div class="w-5 h-5 gradient-bg-gold rounded-lg flex items-center justify-center"><i data-lucide="sparkles" class="w-3 h-3 text-white"></i></div>
+                                        <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Grade 9 — Section Topaz</span>
+                                    </div>
+                                    <h2 class="font-display text-xl md:text-2xl font-bold text-white mb-1">MAPEH 9 Lesson</h2>
+                                    <p class="text-gray-400 text-xs md:text-sm leading-relaxed mb-2">Film Restoration, Film & New Media, Instrumentation, Vocal Style, Rhythm, Production Style</p>
+                                    <div class="flex items-center justify-center sm:justify-start gap-2 flex-wrap">
+                                        <span class="inline-flex items-center gap-1 bg-amber-500/10 text-amber-400 px-2.5 py-0.5 rounded-full text-[10px] font-medium border border-amber-500/20"><i data-lucide="user" class="w-3 h-3"></i>Kian V</span>
+                                        <span class="inline-flex items-center gap-1 bg-cyan-500/10 text-cyan-400 px-2.5 py-0.5 rounded-full text-[10px] font-medium border border-cyan-500/20"><i data-lucide="music" class="w-3 h-3"></i>MAPEH</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 text-white">
+                    <span class="gradient-text-cyan">MAPEH</span><br>
+                    <span class="text-gray-400 text-3xl md:text-5xl lg:text-6xl">Grade 9</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto mb-4 leading-relaxed">
+                    Music, Arts, Physical Education, and Health — Film Restoration, New Media, and Production!
+                </p>
+                <p class="text-sm text-gray-600 mb-10">Adviser: <span class="text-amber-400 font-semibold">Ma'am Jonah Mendizabal</span> · Created by <span class="text-rose-400 font-semibold">Kian V</span></p>
+
+                <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+                    <a href="#music" class="px-5 py-2.5 rounded-2xl text-sm font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 hover:bg-cyan-500/20 transition-all">🎵 Music</a>
+                    <a href="#film-restoration" class="px-5 py-2.5 rounded-2xl text-sm font-semibold bg-rose-500/10 text-rose-400 border border-rose-500/20 hover:bg-rose-500/20 transition-all">🎬 Film Restoration</a>
+                    <a href="#new-media" class="px-5 py-2.5 rounded-2xl text-sm font-semibold bg-violet-500/10 text-violet-400 border border-violet-500/20 hover:bg-violet-500/20 transition-all">📱 New Media</a>
+                    <a href="#quiz" class="px-5 py-2.5 rounded-2xl text-sm font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 hover:bg-amber-500/20 transition-all">🧠 Quiz</a>
+                </div>
+
+                <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
+                    <div class="flex flex-col items-center gap-2 text-gray-600"><span class="text-xs font-medium tracking-widest uppercase">Scroll</span><i data-lucide="chevron-down" class="w-4 h-4"></i></div>
+                </div>
             </div>
-            <!-- ... rest of hero ... -->
         </section>
 
-        <!-- Existing sections: Panitikan, Maikling Kwento, Dula, Tula, Sanaysay remain unchanged -->
-
-        <!-- ═══════════════════════════════════════ -->
-        <!-- TEKSTONG BISWAL (NEW SECTION) -->
-        <!-- ═══════════════════════════════════════ -->
-                <!-- ═══════════════════════════════════════ -->
-        <!-- PANITIKAN OVERVIEW - ENHANCED -->
-        <!-- ═══════════════════════════════════════ -->
-        <section id="panitikan" class="py-24 md:py-32 px-6 bg-[#0D0D0D] relative">
+        <!-- MUSIC SECTION -->
+        <section id="music" class="py-24 md:py-32 px-6 bg-[#0D0D0D] relative">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16 fade-up">
-                    <div class="inline-flex items-center gap-2 bg-red-500/10 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-red-500/20"><i data-lucide="book-open" class="w-4 h-4"></i> Introduksyon</div>
-                    <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-white">Ano ang <span class="gradient-text-warm">Panitikan</span>?</h2>
-                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">Ang panitikan ay salamin ng kultura at karanasan ng isang bansa — nagpapadama, nagpapaisip, at nagpapabago.</p>
+                    <div class="flex items-center justify-center gap-3 mb-6">
+                        <div class="music-wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="inline-flex items-center gap-2 bg-cyan-500/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-cyan-500/20"><i data-lucide="music" class="w-4 h-4"></i> Music</div>
+                    <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-white">Elements of <span class="gradient-text-cyan">Music</span></h2>
+                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">The four main elements that make up music production and performance.</p>
                 </div>
 
-                <!-- NEW: Meanings of Main Genres -->
-                <div class="fade-up mb-16">
-                    <h3 class="font-display text-3xl font-bold text-white mb-10 text-center">Kahulugan ng mga Pangunahing Uri ng <span class="gradient-text-red">Panitikan</span></h3>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="dark-card-glow-red rounded-3xl p-7 topic-card">
-                            <div class="topic-icon w-14 h-14 gradient-bg-red rounded-2xl flex items-center justify-center mx-auto mb-5"><i data-lucide="book-open" class="w-7 h-7 text-white"></i></div>
-                            <h4 class="font-display text-xl font-bold text-center text-white mb-2">Panitikan</h4>
-                            <p class="text-gray-400 text-sm text-center">Ang sining ng pagsulat na gumagamit ng wika upang ipahayag ang mga damdamin, kaisipan, karanasan, at imahinasyon ng tao. Ito ay salamin ng buhay at kultura.</p>
-                        </div>
+                <!-- 4 Main Music Cards -->
+                <div class="grid md:grid-cols-2 gap-8 fade-up">
 
-                        <div class="dark-card-glow-amber rounded-3xl p-7 topic-card">
-                            <div class="topic-icon w-14 h-14 gradient-bg-amber rounded-2xl flex items-center justify-center mx-auto mb-5"><i data-lucide="file-text" class="w-7 h-7 text-white"></i></div>
-                            <h4 class="font-display text-xl font-bold text-center text-white mb-2">Maikling Kwento</h4>
-                            <p class="text-gray-400 text-sm text-center">Maikling kathang-isip na salaysay na may iisang pangunahing banghay, tauhan, at tema. Nababasa sa maikling panahon.</p>
+                    <!-- Instrumentation -->
+                    <div class="dark-card-glow-cyan rounded-3xl p-8 md:p-10 relative overflow-hidden topic-card">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-cyan-600/5 rounded-full -translate-y-1/2 translate-x-1/2 blob"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="topic-icon w-16 h-16 gradient-bg-cyan rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-500/20"><i data-lucide="guitar" class="w-8 h-8 text-white"></i></div>
+                                <div>
+                                    <div class="inline-block bg-cyan-500/10 text-cyan-400 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-cyan-500/20">Element 1</div>
+                                    <h3 class="font-display text-2xl font-bold text-white">Instrumentation</h3>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-5">Instrumentation refers to the <strong class="text-cyan-300">selection and combination of instruments</strong> used in a musical piece. It gives the timbre or color of the sound.</p>
+                            <div class="space-y-3">
+                                <div class="bg-[#0A0A0A] rounded-xl p-4 border border-gray-800">
+                                    <p class="text-xs font-bold text-cyan-400 mb-2">Types of Instruments</p>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <div class="flex items-center gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-cyan-400"></div>String (guitar, violin)</div>
+                                        <div class="flex items-center gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-emerald-400"></div>Wind (flute, trumpet)</div>
+                                        <div class="flex items-center gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-amber-400"></div>Percussion (drums, piano)</div>
+                                        <div class="flex items-center gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-violet-400"></div>Electronic (synthesizer)</div>
+                                    </div>
+                                </div>
+                                <div class="bg-cyan-500/5 rounded-xl p-3 border border-cyan-500/10">
+                                    <p class="text-[11px] text-cyan-300 font-semibold mb-1">💡 Example:</p>
+                                    <p class="text-gray-500 text-xs">A rock band uses electric guitar, bass guitar, drums, and vocals — this is the instrumentation of rock.</p>
+                                </div>
+                            </div>
                         </div>
+                    </div>
 
-                        <div class="dark-card-glow-emerald rounded-3xl p-7 topic-card">
-                            <div class="topic-icon w-14 h-14 gradient-bg-emerald rounded-2xl flex items-center justify-center mx-auto mb-5"><i data-lucide="drama" class="w-7 h-7 text-white"></i></div>
-                            <h4 class="font-display text-xl font-bold text-center text-white mb-2">Dula</h4>
-                            <p class="text-gray-400 text-sm text-center">Akda na isinasagawa sa entablado gamit ang dayalogo at kilos ng mga aktor upang ipakita ang kwento.</p>
+                    <!-- Vocal Style -->
+                    <div class="dark-card-glow-rose rounded-3xl p-8 md:p-10 relative overflow-hidden topic-card">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-rose-600/5 rounded-full -translate-y-1/2 translate-x-1/2 blob"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="topic-icon w-16 h-16 gradient-bg-rose rounded-2xl flex items-center justify-center shadow-lg shadow-rose-500/20"><i data-lucide="mic" class="w-8 h-8 text-white"></i></div>
+                                <div>
+                                    <div class="inline-block bg-rose-500/10 text-rose-400 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-rose-500/20">Element 2</div>
+                                    <h3 class="font-display text-2xl font-bold text-white">Vocal Style</h3>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-5">Vocal style is the <strong class="text-rose-300">way of singing</strong> — how the singer expresses emotion, technique, and expression through their voice.</p>
+                            <div class="space-y-3">
+                                <div class="bg-[#0A0A0A] rounded-xl p-4 border border-gray-800">
+                                    <p class="text-xs font-bold text-rose-400 mb-2">Types of Vocal Styles</p>
+                                    <div class="space-y-2">
+                                        <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-rose-400 mt-1 flex-shrink-0"></div><div><strong class="text-rose-300">Belting</strong> — Powerful singing in high notes</div></div>
+                                        <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-pink-400 mt-1 flex-shrink-0"></div><div><strong class="text-pink-300">Falsetto</strong> — Soft and high-pitched voice</div></div>
+                                        <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-orange-400 mt-1 flex-shrink-0"></div><div><strong class="text-orange-300">Rapping</strong> — Fast rhythmic speech</div></div>
+                                        <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-red-400 mt-1 flex-shrink-0"></div><div><strong class="text-red-300">Vibrato</strong> — Vibrating voice at the end of a note</div></div>
+                                    </div>
+                                </div>
+                                <div class="bg-rose-500/5 rounded-xl p-3 border border-rose-500/10">
+                                    <p class="text-[11px] text-rose-300 font-semibold mb-1">💡 Example:</p>
+                                    <p class="text-gray-500 text-xs">Regine Velasquez is known for her belting technique, while Sarah Geronimo is versatile in various vocal styles.</p>
+                                </div>
+                            </div>
                         </div>
+                    </div>
 
-                        <div class="dark-card-glow-violet rounded-3xl p-7 topic-card">
-                            <div class="topic-icon w-14 h-14 gradient-bg-violet rounded-2xl flex items-center justify-center mx-auto mb-5"><i data-lucide="feather" class="w-7 h-7 text-white"></i></div>
-                            <h4 class="font-display text-xl font-bold text-center text-white mb-2">Tula</h4>
-                            <p class="text-gray-400 text-sm text-center">Sining ng wika na gumagamit ng sukat, tugma, ritmo, at tayutay upang ipahayag ang damdamin at ideya nang masining.</p>
+                    <!-- Rhythm -->
+                    <div class="dark-card-glow-emerald rounded-3xl p-8 md:p-10 relative overflow-hidden topic-card">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-emerald-600/5 rounded-full -translate-y-1/2 translate-x-1/2 blob"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="topic-icon w-16 h-16 gradient-bg-emerald rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/20"><i data-lucide="activity" class="w-8 h-8 text-white"></i></div>
+                                <div>
+                                    <div class="inline-block bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-emerald-500/20">Element 3</div>
+                                    <h3 class="font-display text-2xl font-bold text-white">Rhythm</h3>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-5">Rhythm is the <strong class="text-emerald-300">sequence of sounds and time</strong> — the beat, tempo, and meter that gives movement to the music.</p>
+                            <div class="space-y-3">
+                                <div class="bg-[#0A0A0A] rounded-xl p-4 border border-gray-800">
+                                    <p class="text-xs font-bold text-emerald-400 mb-2">Parts of Rhythm</p>
+                                    <div class="space-y-2">
+                                        <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-emerald-400 mt-1 flex-shrink-0"></div><div><strong class="text-emerald-300">Beat</strong> — The steady pulse of the music</div></div>
+                                        <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-green-400 mt-1 flex-shrink-0"></div><div><strong class="text-green-300">Tempo</strong> — Speed of the beat (slow, moderate, fast)</div></div>
+                                        <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-teal-400 mt-1 flex-shrink-0"></div><div><strong class="text-teal-300">Meter</strong> — Grouping of beats (4/4, 3/4, 6/8)</div></div>
+                                        <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-cyan-400 mt-1 flex-shrink-0"></div><div><strong class="text-cyan-300">Syncopation</strong> — Unexpected emphasis on off-beat</div></div>
+                                    </div>
+                                </div>
+                                <div class="bg-emerald-500/5 rounded-xl p-3 border border-emerald-500/10">
+                                    <p class="text-[11px] text-emerald-300 font-semibold mb-1">💡 Example:</p>
+                                    <p class="text-gray-500 text-xs">"We Will Rock You" by Queen has a simple 4/4 rhythm: BOOM-BOOM-CLAP! It follows the 1-2-3-4 pattern.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Production Style -->
+                    <div class="dark-card-glow-violet rounded-3xl p-8 md:p-10 relative overflow-hidden topic-card">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-violet-600/5 rounded-full -translate-y-1/2 translate-x-1/2 blob"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="topic-icon w-16 h-16 gradient-bg-violet rounded-2xl flex items-center justify-center shadow-lg shadow-violet-500/20"><i data-lucide="sliders-horizontal" class="w-8 h-8 text-white"></i></div>
+                                <div>
+                                    <div class="inline-block bg-violet-500/10 text-violet-400 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-violet-500/20">Element 4</div>
+                                    <h3 class="font-display text-2xl font-bold text-white">Production Style</h3>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-5">Production style is the <strong class="text-violet-300">overall technique and process</strong> in making music — from recording to mixing and mastering.</p>
+                            <div class="space-y-3">
+                                <div class="bg-[#0A0A0A] rounded-xl p-4 border border-gray-800">
+                                    <p class="text-xs font-bold text-violet-400 mb-2">Aspects of Production</p>
+                                    <div class="space-y-2">
+                                        <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-violet-400 mt-1 flex-shrink-0"></div><div><strong class="text-violet-300">Recording</strong> — Capturing sound (studio or live)</div></div>
+                                        <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-purple-400 mt-1 flex-shrink-0"></div><div><strong class="text-purple-300">Mixing</strong> — Blending tracks and adjusting volume</div></div>
+                                        <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-fuchsia-400 mt-1 flex-shrink-0"></div><div><strong class="text-fuchsia-300">Mastering</strong> — Final polish for distribution</div></div>
+                                        <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-pink-400 mt-1 flex-shrink-0"></div><div><strong class="text-pink-300">Effects</strong> — Reverb, delay, autotune, compression</div></div>
+                                    </div>
+                                </div>
+                                <div class="bg-violet-500/5 rounded-xl p-3 border border-violet-500/10">
+                                    <p class="text-[11px] text-violet-300 font-semibold mb-1">💡 Example:</p>
+                                    <p class="text-gray-500 text-xs">OPM pop usually has clear vocals, reverb, and electronic beats — this is the production style of modern Filipino pop.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Rest of original Panitikan content remains -->
-                <div class="grid md:grid-cols-2 gap-16 items-center fade-up">
-                    <!-- ... existing content (Kahalagahan, Genre Cards, Timeline) ... -->
+                <!-- Quick Ref Banner -->
+                <div class="mt-16 fade-up">
+                    <div class="bg-gradient-to-r from-cyan-600 via-rose-600 to-violet-600 rounded-3xl p-8 md:p-10 text-white relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 blob float-1"></div>
+                        <div class="relative z-10">
+                            <h3 class="font-display text-2xl font-bold mb-6">Quick Reference — Music Elements</h3>
+                            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 text-center">
+                                    <p class="text-2xl mb-2">🎸</p>
+                                    <p class="font-bold text-sm mb-1">Instrumentation</p>
+                                    <p class="text-white/60 text-xs">What instruments are used?</p>
+                                </div>
+                                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 text-center">
+                                    <p class="text-2xl mb-2">🎤</p>
+                                    <p class="font-bold text-sm mb-1">Vocal Style</p>
+                                    <p class="text-white/60 text-xs">How does the singer perform?</p>
+                                </div>
+                                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 text-center">
+                                    <p class="text-2xl mb-2">🥁</p>
+                                    <p class="font-bold text-sm mb-1">Rhythm</p>
+                                    <p class="text-white/60 text-xs">What is the beat and tempo?</p>
+                                </div>
+                                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 text-center">
+                                    <p class="text-2xl mb-2">🎛️</p>
+                                    <p class="font-bold text-sm mb-1">Production Style</p>
+                                    <p class="text-white/60 text-xs">How was the song made?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Timeline remains the same -->
             </div>
-        </section> 
-        
-        <section id="tekstong-biswal" class="py-24 md:py-32 px-6 bg-[#0D0D0D] relative">
+        </section>
+
+        <!-- FILM RESTORATION -->
+        <section id="film-restoration" class="py-24 md:py-32 px-6 bg-[#0D0D0D] relative">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16 fade-up">
-                    <div class="inline-flex items-center gap-2 bg-sky-500/10 text-sky-400 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-sky-500/20"><i data-lucide="image" class="w-4 h-4"></i> Tekstong Biswal</div>
-                    <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-white"><span class="gradient-text-sky">Tekstong Biswal</span></h2>
-                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">Ang tekstong biswal ay pagsasama ng teksto at larawan upang maghatid ng mensahe nang mabilis at epektibo.</p>
+                    <div class="inline-flex items-center gap-2 bg-rose-500/10 text-rose-400 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-rose-500/20"><i data-lucide="film" class="w-4 h-4"></i> Arts</div>
+                    <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-white">Film <span class="gradient-text-rose">Restoration</span></h2>
+                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">The process of restoring old films to make them clearer and higher quality.</p>
                 </div>
 
-                <!-- Uri ng Tekstong Biswal -->
-                <div class="fade-up mb-20">
-                    <h3 class="font-display text-3xl font-bold text-white mb-8 text-center">Mga <span class="gradient-text-sky">Uri</span> ng Tekstong Biswal</h3>
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="dark-card-glow-sky rounded-3xl p-8 relative overflow-hidden topic-card">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-sky-600/5 rounded-full -translate-y-1/2 translate-x-1/2 blob"></div>
-                            <div class="relative z-10">
-                                <div class="topic-icon w-16 h-16 gradient-bg-sky rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-sky-500/20"><i data-lucide="image" class="w-8 h-8 text-white"></i></div>
-                                <div class="inline-block bg-sky-500/10 text-sky-400 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider border border-sky-500/20">Poster</div>
-                                <h3 class="font-display text-2xl font-bold mb-3 text-white">Poster</h3>
-                                <p class="text-gray-400 text-sm mb-4">Malaking print na may malakas na visual at maikling teksto. Ginagamit para sa advertising, pang-edukasyon, o pang-propaganda.</p>
-                                <div class="bg-sky-500/5 rounded-xl p-4 text-xs text-sky-300 border border-sky-500/10">Halimbawa: Poster ng pelikula, health campaign, o school event.</div>
+                <!-- What is Film Restoration -->
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16 fade-up">
+                    <div>
+                        <h3 class="font-display text-3xl font-bold mb-6 text-white">What is <span class="gradient-text-rose">Film Restoration</span>?</h3>
+                        <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                            Film restoration is the <strong class="text-white">process of repairing and restoring</strong> old films that have deteriorated over time. It is done to <strong class="text-rose-300">preserve cultural heritage</strong> and showcase classic films in better quality.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-rose-500/10 rounded-xl flex items-center justify-center flex-shrink-0 border border-rose-500/20"><i data-lucide="scan" class="w-5 h-5 text-rose-400"></i></div>
+                                <div><p class="font-semibold text-white">Scanning</p><p class="text-gray-400 text-sm">Digital scanning of the original film negative or print in high resolution.</p></div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-orange-500/10 rounded-xl flex items-center justify-center flex-shrink-0 border border-orange-500/20"><i data-lucide="paintbrush" class="w-5 h-5 text-orange-400"></i></div>
+                                <div><p class="font-semibold text-white">Cleaning & Repair</p><p class="text-gray-400 text-sm">Removing scratches, dirt, flicker, and damage from old film.</p></div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center flex-shrink-0 border border-amber-500/20"><i data-lucide="palette" class="w-5 h-5 text-amber-400"></i></div>
+                                <div><p class="font-semibold text-white">Color Correction</p><p class="text-gray-400 text-sm">Adjusting colors to make the original look clear and accurate.</p></div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-emerald-500/10 rounded-xl flex items-center justify-center flex-shrink-0 border border-emerald-500/20"><i data-lucide="volume-2" class="w-5 h-5 text-emerald-400"></i></div>
+                                <div><p class="font-semibold text-white">Audio Restoration</p><p class="text-gray-400 text-sm">Cleaning the sound — removing noise and enhancing clarity.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Before vs After Visual -->
+                    <div class="space-y-6">
+                        <div class="dark-card-glow-rose rounded-3xl p-6 relative overflow-hidden">
+                            <p class="text-xs font-bold text-rose-400 uppercase tracking-wider mb-4">Before vs. After — Film Restoration</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="relative">
+                                    <div class="bg-[#0A0A0A] rounded-2xl overflow-hidden border border-gray-800">
+                                        <div class="relative">
+                                            <img src="https://picsum.photos/seed/oldfilm1/400/250" alt="Before Restoration" class="w-full h-36 object-cover" style="filter: sepia(1) contrast(0.7) brightness(0.6) saturate(0.3);">
+                                            <div class="absolute inset-0 bg-black/20"></div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute top-2 left-2 bg-red-500/80 text-white text-[9px] font-bold px-2 py-0.5 rounded-md uppercase">Before</div>
+                                </div>
+                                <div class="relative">
+                                    <div class="bg-[#0A0A0A] rounded-2xl overflow-hidden border border-gray-800">
+                                        <img src="https://picsum.photos/seed/oldfilm1/400/250" alt="After Restoration" class="w-full h-36 object-cover" style="filter: contrast(1.1) brightness(1.05) saturate(1.2);">
+                                    </div>
+                                    <div class="absolute top-2 left-2 bg-emerald-500/80 text-white text-[9px] font-bold px-2 py-0.5 rounded-md uppercase">After</div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="dark-card-glow-amber rounded-3xl p-8 relative overflow-hidden topic-card">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-amber-600/5 rounded-full -translate-y-1/2 translate-x-1/2 blob"></div>
-                            <div class="relative z-10">
-                                <div class="topic-icon w-16 h-16 gradient-bg-amber rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/20"><i data-lucide="flyer" class="w-8 h-8 text-white"></i></div>
-                                <div class="inline-block bg-amber-500/10 text-amber-400 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider border border-amber-500/20">Flyer</div>
-                                <h3 class="font-display text-2xl font-bold mb-3 text-white">Flyer / Brochure</h3>
-                                <p class="text-gray-400 text-sm mb-4">Maliit na papel na ipinamimigay. May detalyadong impormasyon at madalas ay may contact details.</p>
-                                <div class="bg-amber-500/5 rounded-xl p-4 text-xs text-amber-300 border border-amber-500/10">Halimbawa: Advertisement ng produkto, invitation, o community announcement.</div>
-                            </div>
-                        </div>
-
-                        <div class="dark-card-glow-violet rounded-3xl p-8 relative overflow-hidden topic-card">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-violet-600/5 rounded-full -translate-y-1/2 translate-x-1/2 blob"></div>
-                            <div class="relative z-10">
-                                <div class="topic-icon w-16 h-16 gradient-bg-violet rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-violet-500/20"><i data-lucide="bar-chart-3" class="w-8 h-8 text-white"></i></div>
-                                <div class="inline-block bg-violet-500/10 text-violet-400 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider border border-violet-500/20">Infographic</div>
-                                <h3 class="font-display text-2xl font-bold mb-3 text-white">Infographic</h3>
-                                <p class="text-gray-400 text-sm mb-4">Visual na representasyon ng data o impormasyon gamit ang mga chart, icon, at maikling teksto.</p>
-                                <div class="bg-violet-500/5 rounded-xl p-4 text-xs text-violet-300 border border-violet-500/10">Halimbawa: Statistics, proseso, o timeline.</div>
+                        <div class="dark-card-glow-rose rounded-3xl p-6 relative overflow-hidden">
+                            <p class="text-xs font-bold text-rose-400 uppercase tracking-wider mb-4">Before vs. After — Color Correction</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="relative">
+                                    <div class="bg-[#0A0A0A] rounded-2xl overflow-hidden border border-gray-800">
+                                        <img src="https://picsum.photos/seed/filmcolor2/400/250" alt="Before Color" class="w-full h-36 object-cover" style="filter: sepia(0.8) brightness(0.5) saturate(0.2);">
+                                    </div>
+                                    <div class="absolute top-2 left-2 bg-red-500/80 text-white text-[9px] font-bold px-2 py-0.5 rounded-md uppercase">Before</div>
+                                </div>
+                                <div class="relative">
+                                    <div class="bg-[#0A0A0A] rounded-2xl overflow-hidden border border-gray-800">
+                                        <img src="https://picsum.photos/seed/filmcolor2/400/250" alt="After Color" class="w-full h-36 object-cover" style="filter: saturate(1.3) contrast(1.1) brightness(1.05);">
+                                    </div>
+                                    <div class="absolute top-2 left-2 bg-emerald-500/80 text-white text-[9px] font-bold px-2 py-0.5 rounded-md uppercase">After</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Teknikal na Elemento -->
+                <!-- Examples of Restored Films -->
                 <div class="fade-up">
-                    <h3 class="font-display text-3xl font-bold text-white mb-8 text-center">Mga <span class="gradient-text-sky">Teknikal na Elemento</span> ng Tekstong Biswal</h3>
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="dark-card-glow-sky rounded-3xl p-8 topic-card">
-                            <div class="flex items-center gap-4 mb-6">
-                                <div class="w-12 h-12 gradient-bg-sky rounded-2xl flex items-center justify-center flex-shrink-0"><i data-lucide="maximize-2" class="w-6 h-6 text-white"></i></div>
-                                <div><h4 class="font-bold text-white text-xl">Laki (Size)</h4><p class="text-sky-400 text-sm">Bigat at sukat ng teksto at larawan.</p></div>
-                            </div>
-                            <p class="text-gray-400 text-sm">Ginagamit para sa hierarchy — malaking font para sa headline.</p>
+                    <h3 class="font-display text-2xl font-bold text-white mb-8 text-center">Examples of <span class="gradient-text-rose">Restored Films</span></h3>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                        <div class="dark-card-glow-rose rounded-2xl p-6 topic-card">
+                            <div class="w-12 h-12 gradient-bg-rose rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-rose-500/20"><i data-lucide="clapperboard" class="w-6 h-6 text-white"></i></div>
+                            <h4 class="font-bold text-white mb-1">Himala (1982)</h4>
+                            <p class="text-gray-500 text-xs mb-2">By Ishmael Bernal — Restored in 2012 in collaboration with ABS-CBN and Central Digital Lab.</p>
+                            <span class="inline-block bg-rose-500/10 text-rose-400 px-2 py-0.5 rounded-full text-[9px] font-bold border border-rose-500/20">4K Restored</span>
                         </div>
-                        <div class="dark-card-glow-amber rounded-3xl p-8 topic-card">
-                            <div class="flex items-center gap-4 mb-6">
-                                <div class="w-12 h-12 gradient-bg-amber rounded-2xl flex items-center justify-center flex-shrink-0"><i data-lucide="space" class="w-6 h-6 text-white"></i></div>
-                                <div><h4 class="font-bold text-white text-xl">Espasyo (White Space)</h4><p class="text-amber-400 text-sm">Bakanteng bahagi sa paligid.</p></div>
-                            </div>
-                            <p class="text-gray-400 text-sm">Nakakatulong sa readability at aesthetic.</p>
+                        <div class="dark-card-glow-amber rounded-2xl p-6 topic-card">
+                            <div class="w-12 h-12 gradient-bg-amber rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-amber-500/20"><i data-lucide="clapperboard" class="w-6 h-6 text-white"></i></div>
+                            <h4 class="font-bold text-white mb-1">Oro, Plata, Mata (1982)</h4>
+                            <p class="text-gray-500 text-xs mb-2">By Peque Gallaga — A classic film showing the effects of war on Filipinos.</p>
+                            <span class="inline-block bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded-full text-[9px] font-bold border border-amber-500/20">2K Restored</span>
                         </div>
-                        <div class="dark-card-glow-violet rounded-3xl p-8 topic-card">
-                            <div class="flex items-center gap-4 mb-6">
-                                <div class="w-12 h-12 gradient-bg-violet rounded-2xl flex items-center justify-center flex-shrink-0"><i data-lucide="palette" class="w-6 h-6 text-white"></i></div>
-                                <div><h4 class="font-bold text-white text-xl">Kulay (Color)</h4><p class="text-violet-400 text-sm">Gamit ng kulay para sa emosyon.</p></div>
-                            </div>
-                            <p class="text-gray-400 text-sm">Dapat may magandang contrast para madaling basahin.</p>
+                        <div class="dark-card-glow-violet rounded-2xl p-6 topic-card">
+                            <div class="w-12 h-12 gradient-bg-violet rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-violet-500/20"><i data-lucide="clapperboard" class="w-6 h-6 text-white"></i></div>
+                            <h4 class="font-bold text-white mb-1">Genghis Khan (1950)</h4>
+                            <p class="text-gray-500 text-xs mb-2">An early Filipino epic — restored by the Film Development Council of the Philippines (FDCP).</p>
+                            <span class="inline-block bg-violet-500/10 text-violet-400 px-2 py-0.5 rounded-full text-[9px] font-bold border border-violet-500/20">Digitally Restored</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Color Table -->
-                <div class="fade-up mt-20">
-                    <h3 class="font-display text-2xl font-bold text-white mb-8 text-center">Mga Kulay at Kahulugan Nito (English)</h3>
-                    <div class="dark-card rounded-3xl p-8 overflow-x-auto">
-                        <table class="w-full text-sm text-left">
-                            <thead>
-                                <tr class="border-b border-gray-700">
-                                    <th class="py-4 px-6 font-semibold text-sky-400">Color</th>
-                                    <th class="py-4 px-6 font-semibold text-sky-400">Meaning / Symbolism</th>
-                                    <th class="py-4 px-6 font-semibold text-sky-400">Example Use</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-800">
-                                <tr><td class="py-5 px-6"><span class="inline-block w-6 h-6 rounded bg-red-500"></span> Red</td><td class="py-5 px-6 text-gray-300">Passion, energy, danger, urgency, love</td><td class="py-5 px-6 text-gray-400">Sales, warnings, love themes</td></tr>
-                                <tr><td class="py-5 px-6"><span class="inline-block w-6 h-6 rounded bg-orange-500"></span> Orange</td><td class="py-5 px-6 text-gray-300">Creativity, enthusiasm, warmth</td><td class="py-5 px-6 text-gray-400">Food ads, fun events</td></tr>
-                                <tr><td class="py-5 px-6"><span class="inline-block w-6 h-6 rounded bg-amber-500"></span> Yellow/Gold</td><td class="py-5 px-6 text-gray-300">Happiness, optimism, wealth</td><td class="py-5 px-6 text-gray-400">Highlights, cheerful designs</td></tr>
-                                <tr><td class="py-5 px-6"><span class="inline-block w-6 h-6 rounded bg-emerald-500"></span> Green</td><td class="py-5 px-6 text-gray-300">Growth, health, nature, money</td><td class="py-5 px-6 text-gray-400">Eco posters, health info</td></tr>
-                                <tr><td class="py-5 px-6"><span class="inline-block w-6 h-6 rounded bg-sky-500"></span> Blue</td><td class="py-5 px-6 text-gray-300">Trust, calmness, professionalism</td><td class="py-5 px-6 text-gray-400">Corporate & educational</td></tr>
-                                <tr><td class="py-5 px-6"><span class="inline-block w-6 h-6 rounded bg-violet-500"></span> Purple</td><td class="py-5 px-6 text-gray-300">Luxury, creativity, mystery</td><td class="py-5 px-6 text-gray-400">Premium & artistic</td></tr>
-                                <tr><td class="py-5 px-6"><span class="inline-block w-6 h-6 rounded bg-rose-500"></span> Pink</td><td class="py-5 px-6 text-gray-300">Romance, femininity, playfulness</td><td class="py-5 px-6 text-gray-400">Fashion, Valentine</td></tr>
-                                <tr><td class="py-5 px-6"><span class="inline-block w-6 h-6 rounded bg-gray-400"></span> Black/Gray</td><td class="py-5 px-6 text-gray-300">Power, elegance, formality</td><td class="py-5 px-6 text-gray-400">Sophisticated designs</td></tr>
-                                <tr><td class="py-5 px-6"><span class="inline-block w-6 h-6 rounded bg-white border border-gray-600"></span> White</td><td class="py-5 px-6 text-gray-300">Purity, simplicity, cleanliness</td><td class="py-5 px-6 text-gray-400">Minimalist & white space</td></tr>
-                            </tbody>
-                        </table>
+                <!-- Why It Matters -->
+                <div class="mt-16 fade-up">
+                    <div class="bg-gradient-to-r from-rose-600/20 via-amber-600/20 to-violet-600/20 rounded-3xl p-8 md:p-10 border border-rose-500/10 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 blob float-1"></div>
+                        <div class="relative z-10">
+                            <h3 class="font-display text-2xl font-bold text-white mb-6">Why is Film Restoration Important?</h3>
+                            <div class="grid sm:grid-cols-3 gap-6">
+                                <div class="bg-white/5 rounded-2xl p-5 border border-white/10 text-center">
+                                    <p class="text-3xl mb-3">🏛️</p>
+                                    <p class="font-bold text-sm mb-1">Cultural Heritage</p>
+                                    <p class="text-gray-400 text-xs">Films are a mirror of our history and culture — they must be protected.</p>
+                                </div>
+                                <div class="bg-white/5 rounded-2xl p-5 border border-white/10 text-center">
+                                    <p class="text-3xl mb-3">📚</p>
+                                    <p class="font-bold text-sm mb-1">Education</p>
+                                    <p class="text-gray-400 text-xs">Future generations can watch and learn from the classics.</p>
+                                </div>
+                                <div class="bg-white/5 rounded-2xl p-5 border border-white/10 text-center">
+                                    <p class="text-3xl mb-3">🎬</p>
+                                    <p class="font-bold text-sm mb-1">Art</p>
+                                    <p class="text-gray-400 text-xs">The cinematography, acting, and directing of the past deserve to be preserved.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PAGSUSULIT (unchanged) -->
-        <!-- Footer (unchanged) -->
+        <!-- FILM & NEW MEDIA -->
+        <section id="new-media" class="py-24 md:py-32 px-6 bg-[#0D0D0D] relative">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 fade-up">
+                    <div class="inline-flex items-center gap-2 bg-violet-500/10 text-violet-400 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-violet-500/20"><i data-lucide="monitor-smartphone" class="w-4 h-4"></i> Arts · Technology</div>
+                    <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-white">Film & <span class="gradient-text-violet">New Media</span></h2>
+                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">From traditional film to the digital world — how media has evolved in the modern era.</p>
+                </div>
 
+                <!-- Tab Navigation -->
+                <div class="flex flex-wrap justify-center gap-3 mb-10 fade-up">
+                    <button class="tab-btn active px-5 py-2.5 rounded-2xl text-sm font-semibold border-2 border-gray-700 bg-[#111111] text-gray-400" data-tab="digital-art"><i data-lucide="pen-tool" class="w-4 h-4 inline mr-1.5"></i>Digital Art</button>
+                    <button class="tab-btn px-5 py-2.5 rounded-2xl text-sm font-semibold border-2 border-gray-700 bg-[#111111] text-gray-400" data-tab="social-media"><i data-lucide="share-2" class="w-4 h-4 inline mr-1.5"></i>Social Media</button>
+                    <button class="tab-btn px-5 py-2.5 rounded-2xl text-sm font-semibold border-2 border-gray-700 bg-[#111111] text-gray-400" data-tab="mobile-app"><i data-lucide="smartphone" class="w-4 h-4 inline mr-1.5"></i>Mobile Application</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="max-w-5xl mx-auto fade-up">
+
+                    <!-- Digital Art -->
+                    <div id="tab-digital-art" class="tab-content active">
+                        <div class="dark-card-glow-violet rounded-3xl p-8 md:p-10 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-40 h-40 bg-violet-600/5 rounded-full -translate-y-1/2 translate-x-1/2 blob"></div>
+                            <div class="relative z-10">
+                                <div class="grid md:grid-cols-2 gap-10 items-start">
+                                    <div>
+                                        <div class="flex items-center gap-3 mb-4">
+                                            <div class="w-14 h-14 gradient-bg-violet rounded-2xl flex items-center justify-center shadow-lg shadow-violet-500/20"><i data-lucide="pen-tool" class="w-7 h-7 text-white"></i></div>
+                                            <div>
+                                                <h3 class="font-display text-2xl font-bold text-white">Digital Art</h3>
+                                                <p class="text-violet-400 text-xs font-bold uppercase tracking-wider">Film → Digital</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-400 text-sm leading-relaxed mb-5">Digital art is the creation of art using <strong class="text-violet-300">digital technology</strong> — from graphic design, animation, to VFX (visual effects) in films. It is the bridge between traditional art and modern technology.</p>
+
+                                        <div class="space-y-3">
+                                            <div class="bg-[#0A0A0A] rounded-xl p-4 border border-gray-800">
+                                                <p class="text-xs font-bold text-violet-400 mb-3">Types of Digital Art in Film</p>
+                                                <div class="space-y-2">
+                                                    <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-violet-400 mt-1 flex-shrink-0"></div><div><strong class="text-violet-300">CGI (Computer-Generated Imagery)</strong> — Effects created on computer (e.g. Avengers, Avatar)</div></div>
+                                                    <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-purple-400 mt-1 flex-shrink-0"></div><div><strong class="text-purple-300">Motion Graphics</strong> — Animated text and graphics (e.g. movie titles)</div></div>
+                                                    <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-fuchsia-400 mt-1 flex-shrink-0"></div><div><strong class="text-fuchsia-300">Matte Painting</strong> — Digital landscapes for backgrounds</div></div>
+                                                    <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-pink-400 mt-1 flex-shrink-0"></div><div><strong class="text-pink-300">Color Grading</strong> — Adjusting color for mood and tone</div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div class="bg-[#0A0A0A] rounded-2xl overflow-hidden border border-gray-800">
+                                            <img src="https://picsum.photos/seed/digitalart9/600/300" alt="Digital Art" class="w-full h-48 object-cover" style="filter: saturate(1.3) contrast(1.1);">
+                                            <div class="p-4">
+                                                <p class="text-xs font-bold text-violet-400 mb-1">🎬 Example in Film</p>
+                                                <p class="text-gray-500 text-xs">"Trese" (Netflix) is a Filipino animated series that used digital art and animation techniques.</p>
+                                            </div>
+                                        </div>
+                                        <div class="bg-violet-500/5 rounded-xl p-4 border border-violet-500/10">
+                                            <p class="text-xs font-bold text-violet-300 mb-2">🛠️ Tools for Digital Art</p>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="bg-violet-500/10 text-violet-400 px-2.5 py-1 rounded-lg text-[10px] font-semibold border border-violet-500/20">Adobe Photoshop</span>
+                                                <span class="bg-violet-500/10 text-violet-400 px-2.5 py-1 rounded-lg text-[10px] font-semibold border border-violet-500/20">After Effects</span>
+                                                <span class="bg-violet-500/10 text-violet-400 px-2.5 py-1 rounded-lg text-[10px] font-semibold border border-violet-500/20">Blender</span>
+                                                <span class="bg-violet-500/10 text-violet-400 px-2.5 py-1 rounded-lg text-[10px] font-semibold border border-violet-500/20">Procreate</span>
+                                                <span class="bg-violet-500/10 text-violet-400 px-2.5 py-1 rounded-lg text-[10px] font-semibold border border-violet-500/20">Maya 3D</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div id="tab-social-media" class="tab-content">
+                        <div class="dark-card-glow-sky rounded-3xl p-8 md:p-10 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-40 h-40 bg-sky-600/5 rounded-full -translate-y-1/2 translate-x-1/2 blob"></div>
+                            <div class="relative z-10">
+                                <div class="grid md:grid-cols-2 gap-10 items-start">
+                                    <div>
+                                        <div class="flex items-center gap-3 mb-4">
+                                            <div class="w-14 h-14 gradient-bg-sky rounded-2xl flex items-center justify-center shadow-lg shadow-sky-500/20"><i data-lucide="share-2" class="w-7 h-7 text-white"></i></div>
+                                            <div>
+                                                <h3 class="font-display text-2xl font-bold text-white">Social Media</h3>
+                                                <p class="text-sky-400 text-xs font-bold uppercase tracking-wider">Film → Social Platform</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-400 text-sm leading-relaxed mb-5">Social media has become the <strong class="text-sky-300">largest platform</strong> for sharing film content. Short films, trailers, reviews, and viral videos — all on social media.</p>
+
+                                        <div class="space-y-3">
+                                            <div class="bg-[#0A0A0A] rounded-xl p-4 border border-gray-800">
+                                                <p class="text-xs font-bold text-sky-400 mb-3">Platforms & Uses</p>
+                                                <div class="space-y-2">
+                                                    <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-red-400 mt-1 flex-shrink-0"></div><div><strong class="text-red-300">YouTube</strong> — Full-length videos, vlogs, film reviews, tutorials</div></div>
+                                                    <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-pink-400 mt-1 flex-shrink-0"></div><div><strong class="text-pink-300">TikTok</strong> — Short-form videos, film clips, trending content</div></div>
+                                                    <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-blue-400 mt-1 flex-shrink-0"></div><div><strong class="text-blue-300">Facebook</strong> — Film groups, live streaming, community</div></div>
+                                                    <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-purple-400 mt-1 flex-shrink-0"></div><div><strong class="text-purple-300">Instagram</strong> — Reels, behind-the-scenes, film photography</div></div>
+                                                </div>
+                                            </div>
+                                            <div class="bg-sky-500/5 rounded-xl p-3 border border-sky-500/10">
+                                                <p class="text-[11px] text-sky-300 font-semibold mb-1">💡 Impact:</p>
+                                                <p class="text-gray-500 text-xs">Social media has given a voice to independent filmmakers — they can promote their films without a big budget.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div class="bg-[#0A0A0A] rounded-2xl overflow-hidden border border-gray-800">
+                                            <img src="https://picsum.photos/seed/socialmedia9/600/300" alt="Social Media Film" class="w-full h-48 object-cover" style="filter: saturate(1.2) brightness(1.05);">
+                                            <div class="p-4">
+                                                <p class="text-xs font-bold text-sky-400 mb-1">📱 Example</p>
+                                                <p class="text-gray-500 text-xs">Filipino content creators like "Pete's Film" and "Kimpoy Feliciano" started on social media before entering mainstream media.</p>
+                                            </div>
+                                        </div>
+                                        <div class="bg-sky-500/5 rounded-xl p-4 border border-sky-500/10">
+                                            <p class="text-xs font-bold text-sky-300 mb-2">📊 Film on Social Media</p>
+                                            <div class="space-y-2">
+                                                <div class="flex items-center justify-between text-xs"><span class="text-gray-400">YouTube Film Reviews</span><span class="text-sky-400 font-bold">70%+ of viewers</span></div>
+                                                <div class="w-full bg-gray-800 rounded-full h-2"><div class="h-full bg-sky-500 rounded-full" style="width:70%"></div></div>
+                                                <div class="flex items-center justify-between text-xs"><span class="text-gray-400">TikTok Film Clips</span><span class="text-pink-400 font-bold">85%+ engagement</span></div>
+                                                <div class="w-full bg-gray-800 rounded-full h-2"><div class="h-full bg-pink-500 rounded-full" style="width:85%"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Application -->
+                    <div id="tab-mobile-app" class="tab-content">
+                        <div class="dark-card-glow-emerald rounded-3xl p-8 md:p-10 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-40 h-40 bg-emerald-600/5 rounded-full -translate-y-1/2 translate-x-1/2 blob"></div>
+                            <div class="relative z-10">
+                                <div class="grid md:grid-cols-2 gap-10 items-start">
+                                    <div>
+                                        <div class="flex items-center gap-3 mb-4">
+                                            <div class="w-14 h-14 gradient-bg-emerald rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/20"><i data-lucide="smartphone" class="w-7 h-7 text-white"></i></div>
+                                            <div>
+                                                <h3 class="font-display text-2xl font-bold text-white">Mobile Application</h3>
+                                                <p class="text-emerald-400 text-xs font-bold uppercase tracking-wider">Film → App</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-400 text-sm leading-relaxed mb-5">Mobile applications have transformed the way we <strong class="text-emerald-300">watch and create films</strong>. From streaming apps to editing tools — everything is in your hands.</p>
+
+                                        <div class="space-y-3">
+                                            <div class="bg-[#0A0A0A] rounded-xl p-4 border border-gray-800">
+                                                <p class="text-xs font-bold text-emerald-400 mb-3">Types of Film Apps</p>
+                                                <div class="space-y-2">
+                                                    <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-red-400 mt-1 flex-shrink-0"></div><div><strong class="text-red-300">Streaming</strong> — Netflix, Viu, iWantTFC (watching)</div></div>
+                                                    <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-blue-400 mt-1 flex-shrink-0"></div><div><strong class="text-blue-300">Editing</strong> — CapCut, KineMaster, VN Video (editing)</div></div>
+                                                    <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-purple-400 mt-1 flex-shrink-0"></div><div><strong class="text-purple-300">Camera</strong> — Filmic Pro, Blackmagic Camera (shooting)</div></div>
+                                                    <div class="flex items-start gap-2 text-xs text-gray-400"><div class="w-2 h-2 rounded-full bg-orange-400 mt-1 flex-shrink-0"></div><div><strong class="text-orange-300">Effects</strong> — Canva, VSCO (post-processing)</div></div>
+                                                </div>
+                                            </div>
+                                            <div class="bg-emerald-500/5 rounded-xl p-3 border border-emerald-500/10">
+                                                <p class="text-[11px] text-emerald-300 font-semibold mb-1">💡 Impact:</p>
+                                                <p class="text-gray-500 text-xs">Anyone can now be a filmmaker — you only need your smartphone!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div class="bg-[#0A0A0A] rounded-2xl overflow-hidden border border-gray-800">
+                                            <img src="https://picsum.photos/seed/mobileapp9/600/300" alt="Mobile Film" class="w-full h-48 object-cover" style="filter: saturate(1.2) brightness(1.05);">
+                                            <div class="p-4">
+                                                <p class="text-xs font-bold text-emerald-400 mb-1">📱 Example</p>
+                                                <p class="text-gray-500 text-xs">"Untrue" (2019) by Sigrid Andrea Bernardo used smartphone camera for some scenes.</p>
+                                            </div>
+                                        </div>
+                                        <div class="bg-emerald-500/5 rounded-xl p-4 border border-emerald-500/10">
+                                            <p class="text-xs font-bold text-emerald-300 mb-2">🛠️ Free Editing Apps</p>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-lg text-[10px] font-semibold border border-emerald-500/20">CapCut</span>
+                                                <span class="bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-lg text-[10px] font-semibold border border-emerald-500/20">VN Video</span>
+                                                <span class="bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-lg text-[10px] font-semibold border border-emerald-500/20">KineMaster</span>
+                                                <span class="bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-lg text-[10px] font-semibold border border-emerald-500/20">InShot</span>
+                                                <span class="bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-lg text-[10px] font-semibold border border-emerald-500/20">DaVinci Resolve</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evolution Timeline -->
+                <div class="mt-16 fade-up">
+                    <h3 class="font-display text-2xl font-bold text-white mb-8 text-center">Evolution: <span class="gradient-text-warm">Film → New Media</span></h3>
+                    <div class="max-w-4xl mx-auto">
+                        <div class="dark-card-glow-violet rounded-3xl p-8 md:p-10">
+                            <div class="space-y-0">
+                                <div class="flex gap-4 items-start">
+                                    <div class="flex flex-col items-center">
+                                        <div class="w-10 h-10 rounded-full bg-amber-500/15 flex items-center justify-center border border-amber-500/30"><i data-lucide="film" class="w-5 h-5 text-amber-400"></i></div>
+                                        <div class="w-0.5 h-12 bg-gray-800"></div>
+                                    </div>
+                                    <div class="pb-4"><p class="font-bold text-amber-400 text-sm">1890s — Film Era</p><p class="text-gray-500 text-xs">Early films on 35mm — silent, black and white.</p></div>
+                                </div>
+                                <div class="flex gap-4 items-start">
+                                    <div class="flex flex-col items-center">
+                                        <div class="w-10 h-10 rounded-full bg-rose-500/15 flex items-center justify-center border border-rose-500/30"><i data-lucide="tv" class="w-5 h-5 text-rose-400"></i></div>
+                                        <div class="w-0.5 h-12 bg-gray-800"></div>
+                                    </div>
+                                    <div class="pb-4"><p class="font-bold text-rose-400 text-sm">1950s — Television</p><p class="text-gray-500 text-xs">Films entered homes through TV.</p></div>
+                                </div>
+                                <div class="flex gap-4 items-start">
+                                    <div class="flex flex-col items-center">
+                                        <div class="w-10 h-10 rounded-full bg-violet-500/15 flex items-center justify-center border border-violet-500/30"><i data-lucide="monitor" class="w-5 h-5 text-violet-400"></i></div>
+                                        <div class="w-0.5 h-12 bg-gray-800"></div>
+                                    </div>
+                                    <div class="pb-4"><p class="font-bold text-violet-400 text-sm">2000s — Digital Revolution</p><p class="text-gray-500 text-xs">From film cameras to digital cameras — faster and more affordable.</p></div>
+                                </div>
+                                <div class="flex gap-4 items-start">
+                                    <div class="flex flex-col items-center">
+                                        <div class="w-10 h-10 rounded-full bg-cyan-500/15 flex items-center justify-center border border-cyan-500/30"><i data-lucide="globe" class="w-5 h-5 text-cyan-400"></i></div>
+                                        <div class="w-0.5 h-12 bg-gray-800"></div>
+                                    </div>
+                                    <div class="pb-4"><p class="font-bold text-cyan-400 text-sm">2010s — Streaming & Social Media</p><p class="text-gray-500 text-xs">Netflix, YouTube, TikTok — films are now on the internet.</p></div>
+                                </div>
+                                <div class="flex gap-4 items-start">
+                                    <div class="flex flex-col items-center">
+                                        <div class="w-10 h-10 rounded-full bg-emerald-500/15 flex items-center justify-center border border-emerald-500/30"><i data-lucide="smartphone" class="w-5 h-5 text-emerald-400"></i></div>
+                                    </div>
+                                    <div><p class="font-bold text-emerald-400 text-sm">Present — Mobile & AI</p><p class="text-gray-500 text-xs">Smartphones and AI are the new tools for filmmaking — accessible to everyone.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIZ -->
+        <section id="quiz" class="py-24 md:py-32 px-6 bg-[#0D0D0D] relative">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 fade-up">
+                    <div class="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-amber-500/20"><i data-lucide="brain" class="w-4 h-4"></i> Quiz</div>
+                    <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-white">Test <span class="gradient-text-gold">Yourself</span></h2>
+                </div>
+                <div id="quizContainer" class="fade-up"></div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="py-16 px-6 bg-[#0A0A0A] border-t border-gray-800/50">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl overflow-hidden border-2 border-amber-500/30">
+                            <img src="/home/workdir/attachments/topaz.jpg" alt="9 Topaz" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p class="font-bold text-white">MAPEH 9 · Topaz</p>
+                            <p class="text-gray-500 text-xs">Grade 9 — First Quarter</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">Adviser: <span class="text-amber-400 font-semibold">Ma'am Jonah Mendizabal</span> · Created by <span class="text-rose-400 font-semibold">Kian V</span></p>
+                    <div class="flex items-center gap-2 text-gray-600 text-xs"><i data-lucide="sparkles" class="w-4 h-4 text-amber-500/50"></i><span>Powered by creativity</span></div>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script>
-        // Existing script remains the same
-        // ... (your full script code) ...
+        // LOGIN
+        const PASSCODE = '4421topaz';
+        const loginOverlay = document.getElementById('loginOverlay');
+        const mainContent = document.getElementById('mainContent');
+        const passcodeInput = document.getElementById('passcodeInput');
+        const loginBtn = document.getElementById('loginBtn');
+        const errorMessage = document.getElementById('errorMessage');
+        const inputWrapper = document.getElementById('inputWrapper');
+        const togglePasscode = document.getElementById('togglePasscode');
+
+        if (sessionStorage.getItem('topazMapehAuth') === 'true') {
+            loginOverlay.classList.add('hiding');
+            mainContent.classList.add('show');
+            document.body.style.overflow = 'auto';
+            initMainPage();
+        } else {
+            document.body.style.overflow = 'hidden';
+        }
+
+        let passVisible = false;
+        togglePasscode.addEventListener('click', () => {
+            passVisible = !passVisible;
+            passcodeInput.type = passVisible ? 'text' : 'password';
+            togglePasscode.innerHTML = passVisible ? '<i data-lucide="eye-off" class="w-5 h-5"></i>' : '<i data-lucide="eye" class="w-5 h-5"></i>';
+            lucide.createIcons();
+        });
+
+        function attemptLogin() {
+            const input = passcodeInput.value.trim().toLowerCase();
+            if (input === PASSCODE) {
+                sessionStorage.setItem('topazMapehAuth', 'true');
+                loginOverlay.classList.add('hiding');
+                setTimeout(() => { mainContent.classList.add('show'); document.body.style.overflow = 'auto'; initMainPage(); }, 300);
+            } else {
+                errorMessage.style.opacity = '1';
+                inputWrapper.classList.add('shake');
+                passcodeInput.style.borderColor = '#EF4444';
+                setTimeout(() => { inputWrapper.classList.remove('shake'); passcodeInput.style.borderColor = ''; }, 600);
+                setTimeout(() => { errorMessage.style.opacity = '0'; }, 3000);
+            }
+        }
+        loginBtn.addEventListener('click', attemptLogin);
+        passcodeInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') attemptLogin(); });
+
+        function doLogout() {
+            sessionStorage.removeItem('topazMapehAuth');
+            loginOverlay.classList.remove('hiding');
+            mainContent.classList.remove('show');
+            document.body.style.overflow = 'hidden';
+            passcodeInput.value = '';
+            window.scrollTo(0, 0);
+        }
+        document.getElementById('logoutBtn')?.addEventListener('click', doLogout);
+        document.getElementById('mobileLogoutBtn')?.addEventListener('click', doLogout);
+
+        // Login Particles
+        (function() {
+            const c = document.getElementById('loginParticles'); if (!c) return;
+            const colors = ['rgba(6,182,212,0.15)', 'rgba(244,63,94,0.1)', 'rgba(139,92,246,0.08)', 'rgba(245,158,11,0.12)'];
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement('div'); p.style.cssText = `position:absolute;border-radius:50%;pointer-events:none;left:${Math.random()*100}%;top:${Math.random()*100}%;background:${colors[Math.floor(Math.random()*colors.length)]};width:${Math.random()*5+2}px;height:${Math.random()*5+2}px;animation:float${Math.ceil(Math.random()*4)} ${Math.random()*8+4}s ease-in-out infinite;animation-delay:${Math.random()*4}s;`; c.appendChild(p);
+            }
+        })();
+
+        // MAIN PAGE INIT
+        function initMainPage() {
+            lucide.createIcons();
+            initScrollAnimations();
+            initMobileMenu();
+            initTabs();
+            initQuiz();
+        }
+
+        function initScrollAnimations() {
+            const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+        }
+
+        function initMobileMenu() {
+            const btn = document.getElementById('mobileMenuBtn'), menu = document.getElementById('mobileMenu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+            menu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
+        }
+
+        function initTabs() {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    btn.classList.add('active');
+                    document.getElementById('tab-' + btn.dataset.tab)?.classList.add('active');
+                    lucide.createIcons();
+                });
+            });
+        }
+
+        // QUIZ
+        function initQuiz() {
+            const questions = [
+                { q: 'Which music element refers to the selection of instruments?', options: ['Rhythm', 'Vocal Style', 'Instrumentation', 'Production Style'], answer: 2 },
+                { q: 'What is falsetto?', options: ['Loud powerful singing', 'Soft and high-pitched voice', 'Fast rhythmic speech', 'Vibrating voice'], answer: 1 },
+                { q: 'What is rhythm?', options: ['Speed of the song', 'Sequence of sounds and time', 'Type of instrument', 'Way of singing'], answer: 1 },
+                { q: 'Which production process adjusts the volume of each track?', options: ['Mastering', 'Recording', 'Mixing', 'Effects'], answer: 2 },
+                { q: 'What is film restoration?', options: ['Making a new film', 'Restoring old films', 'Deleting a film', 'Uploading to YouTube'], answer: 1 },
+                { q: 'Which film was restored in 2012 by Ishmael Bernal?', options: ['Oro, Plata, Mata', 'Himala', 'Genghis Khan', 'Tatlong Taong Walang Diyos'], answer: 1 },
+                { q: 'What does CGI stand for?', options: ['Camera Generated Image', 'Computer-Generated Imagery', 'Color Grading Integration', 'Creative Graphic Interface'], answer: 1 },
+                { q: 'Which social media platform is known for short-form video content?', options: ['Facebook', 'YouTube', 'TikTok', 'Twitter'], answer: 2 },
+                { q: 'Which app can be used to edit videos on a phone?', options: ['Netflix', 'CapCut', 'Spotify', 'Viber'], answer: 1 },
+                { q: 'What is meter in music?', options: ['Speed of the song', 'Grouping of beats', 'Volume of sound', 'Type of instrument'], answer: 1 }
+            ];
+
+            let currentQ = 0, score = 0, answered = false;
+            const container = document.getElementById('quizContainer');
+            if (!container) return;
+
+            function renderQuestion() {
+                if (currentQ >= questions.length) {
+                    const pct = Math.round((score / questions.length) * 100);
+                    const emoji = pct >= 80 ? '🎉' : pct >= 60 ? '👍' : '💪';
+                    const msg = pct >= 80 ? 'Excellent! Perfect score!' : pct >= 60 ? 'Good job! Study more!' : 'You can do it! Try again!';
+                    container.innerHTML = `<div class="dark-card-glow-gold rounded-3xl p-8 md:p-12 text-center"><div class="text-6xl mb-4">${emoji}</div><h3 class="font-display text-3xl font-bold text-white mb-2">Quiz Complete!</h3><p class="text-gray-400 text-lg mb-2">${msg}</p><p class="text-gray-400 text-lg mb-6">Score: <span class="text-amber-400 font-bold">${score}</span> out of <span class="text-white font-bold">${questions.length}</span> (${pct}%)</p><div class="w-full bg-gray-800 rounded-full h-4 mb-8 max-w-xs mx-auto overflow-hidden"><div class="h-full rounded-full transition-all duration-1000 ${pct >= 80 ? 'gradient-bg-emerald' : pct >= 60 ? 'gradient-bg-amber' : 'gradient-bg-rose'}" style="width:${pct}%"></div></div><button onclick="location.reload()" class="px-6 py-3 gradient-bg-gold text-white font-bold rounded-2xl hover:shadow-lg hover:shadow-amber-500/25 hover:scale-[1.02] active:scale-[0.98] transition-all">Try Again</button></div>`;
+                    return;
+                }
+                const q = questions[currentQ]; answered = false;
+                container.innerHTML = `<div class="dark-card-glow-gold rounded-3xl p-8 md:p-10"><div class="flex items-center justify-between mb-6"><span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Question ${currentQ + 1} of ${questions.length}</span><span class="text-xs font-bold text-cyan-400">Score: ${score}</span></div><div class="w-full bg-gray-800 rounded-full h-2 mb-8 overflow-hidden"><div class="h-full gradient-bg-gold rounded-full transition-all duration-500" style="width:${(currentQ/questions.length)*100}%"></div></div><h3 class="font-display text-xl md:text-2xl font-bold text-white mb-8">${q.q}</h3><div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="quizOptions">${q.options.map((opt, i) => `<button class="quiz-opt bg-[#111111] border-2 border-gray-700 rounded-2xl p-4 text-left text-white font-medium hover:border-amber-500/50 hover:bg-amber-500/5 transition-all" data-idx="${i}"><span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-gray-800 text-gray-400 text-xs font-bold mr-3">${String.fromCharCode(65+i)}</span>${opt}</button>`).join('')}</div><div id="quizFeedback" class="mt-6 hidden"></div></div>`;
+
+                document.querySelectorAll('.quiz-opt').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        if (answered) return; answered = true;
+                        const idx = parseInt(btn.dataset.idx); const correct = idx === q.answer;
+                        if (correct) score++;
+                        document.querySelectorAll('.quiz-opt').forEach(b => {
+                            b.style.pointerEvents = 'none'; const bIdx = parseInt(b.dataset.idx);
+                            if (bIdx === q.answer) { b.classList.remove('border-gray-700'); b.classList.add('border-emerald-500', 'bg-emerald-500/10'); b.querySelector('span').classList.add('bg-emerald-500', 'text-white'); }
+                            else if (bIdx === idx && !correct) { b.classList.remove('border-gray-700'); b.classList.add('border-red-500', 'bg-red-500/10'); b.querySelector('span').classList.add('bg-red-500', 'text-white'); }
+                        });
+                        const fb = document.getElementById('quizFeedback'); fb.classList.remove('hidden');
+                        fb.innerHTML = `<div class="flex items-center justify-between flex-wrap gap-3"><p class="font-semibold ${correct ? 'text-emerald-400' : 'text-red-400'}">${correct ? '✓ Correct!' : '✗ Wrong. Answer: ' + q.options[q.answer]}</p><button id="nextQBtn" class="px-5 py-2 gradient-bg-gold text-white font-bold rounded-xl text-sm hover:shadow-lg hover:shadow-amber-500/25 transition-all">Next →</button></div>`;
+                        document.getElementById('nextQBtn').addEventListener('click', () => { currentQ++; renderQuestion(); });
+                    });
+                });
+            }
+            renderQuestion();
+        }
+
+        lucide.createIcons();
     </script>
 </body>
 </html>
